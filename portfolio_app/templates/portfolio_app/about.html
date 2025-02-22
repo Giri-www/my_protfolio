@@ -1,0 +1,144 @@
+{% extends 'portfolio_app/base.html' %}
+
+{% block title %}About Me - My Portfolio{% endblock %}
+
+{% block content %}
+<style>
+    /* Hero Section */
+    .about-section {
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        padding: 100px 20px;
+        color: white;
+        text-align: center;
+        animation: fadeInDown 1s ease-in-out;
+    }
+
+    /* About Content */
+    .about-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 80px 0;
+    }
+
+    /* Profile Image */
+    .about-image img {
+        width: 100%;
+        max-width: 350px;
+        border-radius: 50%;
+        box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.3);
+        animation: fadeInLeft 1.2s ease-in-out;
+    }
+
+    /* About Card */
+    .about-card {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        animation: fadeInRight 1.2s ease-in-out;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .about-card:hover {
+        transform: scale(1.07);
+        box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Highlighted Text */
+    .highlight {
+        color: #6a11cb;
+        font-weight: bold;
+    }
+
+    .about-card h2 {
+        color: black;
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    .about-card p {
+        color: #333;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    /* Typing Effect */
+    .typing-text {
+        font-size: 1.5rem;
+        font-weight: bold;
+        display: inline-block;
+        overflow: hidden;
+        border-right: 3px solid white;
+        white-space: nowrap;
+        width: 0;
+        animation: typing 3s steps(40, end) forwards, blink 0.8s infinite;
+    }
+
+    @keyframes typing {
+        from { width: 0; }
+        to { width: 100%; }
+    }
+
+    @keyframes blink {
+        50% { border-color: transparent; }
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+        from { opacity: 0; transform: translateY(-30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInLeft {
+        from { opacity: 0; transform: translateX(-30px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes fadeInRight {
+        from { opacity: 0; transform: translateX(30px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+</style>
+
+<!-- Hero Section -->
+<div class="about-section">
+    <h1 class="display-4">About Me</h1>
+    <p class="lead"><span class="typing-text">Django Developer | Full Stack Engineer</span></p>
+</div>
+
+<!-- About Content -->
+<div class="container about-content">
+    <div class="row justify-content-center">
+        <!-- Profile Image -->
+        <div class="col-md-4 text-center about-image">
+            <img src="https://via.placeholder.com/350" alt="Profile Picture">
+        </div>
+
+        <!-- About Card -->
+        <div class="col-md-6">
+            <div class="about-card">
+                <h2>Who Am I?</h2>
+                <p>
+                    I'm a <span class="highlight">Django Developer</span> passionate about building scalable web applications. With experience in backend development, API design, and full-stack projects, I specialize in <span class="highlight">Python, Django, JavaScript, and MySQL</span>.
+                </p>
+                <p>
+                    Whether it's developing <span class="highlight">RESTful APIs</span>, integrating databases, or designing user-friendly UI/UX, my focus is always on <span class="highlight">clean code, efficiency, and great user experience</span>.
+                </p>
+                <div class="social-links mt-3">
+                    <a href="https://github.com/" class="me-3" target="_blank"><i class="bi bi-github fs-3"></i></a>
+                    <a href="https://linkedin.com/" class="me-3" target="_blank"><i class="bi bi-linkedin fs-3"></i></a>
+                    <a href="https://twitter.com/" class="me-3" target="_blank"><i class="bi bi-twitter fs-3"></i></a>
+                    <a href="mailto:your-email@example.com"><i class="bi bi-envelope fs-3"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends 'portfolio_app/base.html' %}
+
+{% block title %}Home - My Portfolio{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <div class="text-center">
+        <h1 class="display-3 fw-bold animate__animated animate__fadeInDown">Hi, I'm a Django Developer</h1>
+        <p class="lead mt-3 animate__animated animate__fadeInUp">I build high-performance web applications with Python & Django.</p>
+        <a href="{% url 'projects' %}" class="btn btn-custom btn-lg mt-4 animate__animated animate__zoomIn">View My Projects</a>
+    </div>
+</div>
+
+<div class="container text-center mt-5">
+    <h2 class="text-gradient animate__animated animate__fadeIn">What I Do</h2>
+    <div class="row mt-4 g-4">
+        <div class="col-md-4 animate__animated animate__zoomIn">
+            <div class="card shadow-lg p-4 border-0 rounded-4">
+                <div class="icon-box bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3">
+                    <i class="bi bi-code-slash fs-1"></i>
+                </div>
+                <h4 class="mt-3">Full-Stack Development</h4>
+                <p>Building modern and scalable web applications.</p>
+            </div>
+        </div>
+        <div class="col-md-4 animate__animated animate__zoomIn" style="animation-delay: 0.2s;">
+            <div class="card shadow-lg p-4 border-0 rounded-4">
+                <div class="icon-box bg-success text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3">
+                    <i class="bi bi-database fs-1"></i>
+                </div>
+                <h4 class="mt-3">Database Management</h4>
+                <p>Optimizing and managing databases efficiently.</p>
+            </div>
+        </div>
+        <div class="col-md-4 animate__animated animate__zoomIn" style="animation-delay: 0.4s;">
+            <div class="card shadow-lg p-4 border-0 rounded-4">
+                <div class="icon-box bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3">
+                    <i class="bi bi-gear-wide fs-1"></i>
+                </div>
+                <h4 class="mt-3">API Development</h4>
+                <p>Creating secure and scalable REST APIs.</p>
+                <ul class="list-unstyled text-muted">
+                    <li><i class="bi bi-check-circle text-success"></i> RESTful & GraphQL APIs</li>
+                    <li><i class="bi bi-check-circle text-success"></i> Authentication & Security</li>
+                    <li><i class="bi bi-check-circle text-success"></i> Performance Optimization</li>
+                    <li><i class="bi bi-check-circle text-success"></i> Third-party Integrations</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .icon-box {
+        width: 80px;
+        height: 80px;
+        display: flex;
+    }
+    .card:hover {
+        transform: translateY(-10px);
+        transition: 0.3s ease-in-out;
+    }
+</style>
+{% endblock %}

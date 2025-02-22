@@ -1,0 +1,30 @@
+{% extends 'portfolio_app/base.html' %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">My Projects</h2>
+    <div class="row">
+        {% for project in projects %}
+        <div class="col-md-4">
+            <div class="card mt-4">
+                {% if project.image %}
+                <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.title }}">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ project.title }}</h5>
+                    <p class="card-text">{{ project.description }}</p>
+                    {% if project.github_link %}
+                    <a href="{{ project.github_link }}" class="btn btn-primary">GitHub</a>
+                    {% endif %}
+                    {% if project.live_demo %}
+                    <a href="{{ project.live_demo }}" class="btn btn-success">Live Demo</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
