@@ -27,6 +27,7 @@ DEBUG = False
 
 # ALLOWED_HOSTS = ['*']
 ALLOWED_HOSTS = [
+    "my-protfolio-xe6a.onrender.com",
     "myportfolio-production.up.railway.app",  # Use your actual Railway domain
     "127.0.0.1",
     "localhost",
