@@ -33,6 +33,8 @@ ALLOWED_HOSTS = [
     "localhost",
 ]
 
+CSRF_TRUSTED_ORIGINS = ['https://my-protfolio-xe6a.onrender.com']
+SECURE_SSL_REDIRECT = True
 
 # Application definition
 
@@ -133,7 +135,7 @@ STATICFILES_DIRS = [
 
 # Only for production when using collectstatic
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
